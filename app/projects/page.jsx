@@ -2,6 +2,7 @@ import Image from "next/image";
 import Portfolio from "./portfolio";
 import Services from "./services";
 import Port from "./port";
+import Link from "next/link";
 
 export const metadata = {
   title: "Projects",
@@ -23,19 +24,18 @@ export default function Projects() {
         </div>
       </div>
 
-      
       <div className="mt-[40px] flex flex-wrap justify-between gap-8 max-w-[1440px] mx-auto px-14">
         {/* Project 1 */}
         <div className="flex-1 max-w-[50%] group">
-          <a 
-            href="https://example.com" 
-            target="_blank" 
+          <a
+            href="https://example.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
           >
-            <img 
-              src="/assets/img.jpg" 
-              alt="Project 1" 
+            <img
+              src="/assets/img.jpg"
+              alt="Project 1"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </a>
@@ -55,18 +55,15 @@ export default function Projects() {
 
         {/* Project 2 */}
         <div className="flex-1 max-w-[50%] group">
-          <a 
-            href="https://example.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
-          >
-            <img 
-              src="/assets/img2.jpg" 
-              alt="Project 2" 
-              className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
-          </a>
+          <Link href="/content-one">
+            <div className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer group">
+              <img
+                src="/assets/img2.jpg"
+                alt="Project 2"
+                className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+              />
+            </div>
+          </Link>
           <div className="relative h-[48px] mt-4 overflow-hidden">
             <h3 className="absolute top-0 left-0 text-white text-[40px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
               Micro-loans digitization
@@ -85,15 +82,15 @@ export default function Projects() {
       <div className="mt-[40px] flex flex-wrap justify-between gap-8 max-w-[1440px] mx-auto px-14">
         {/* Project 3 */}
         <div className="flex-1 max-w-[50%] group">
-          <a 
-            href="https://example.com" 
-            target="_blank" 
+          <a
+            href="https://example.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
           >
-            <img 
-              src="/assets/img.jpg" 
-              alt="Project 3" 
+            <img
+              src="/assets/img.jpg"
+              alt="Project 3"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </a>
@@ -113,15 +110,15 @@ export default function Projects() {
 
         {/* Project 4 */}
         <div className="flex-1 max-w-[50%] group">
-          <a 
-            href="https://example.com" 
-            target="_blank" 
+          <a
+            href="https://example.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
           >
-            <img 
-              src="/assets/img3.jpg" 
-              alt="Project 4" 
+            <img
+              src="/assets/img3.jpg"
+              alt="Project 4"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </a>
@@ -138,13 +135,14 @@ export default function Projects() {
             <p>Product Thinking</p>
           </div>
         </div>
-      </div> 
-      
-        <Services />
-       <div>  <Portfolio />
-       </div>
-    <Port />
+      </div>
+
+      <Services />
+      <div>
+        {" "}
+        <Portfolio />
+      </div>
+      <Port />
     </div>
-   
   );
 }

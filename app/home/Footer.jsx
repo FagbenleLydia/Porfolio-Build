@@ -1,28 +1,53 @@
-import React from "react";
+"use client";
+
+export const metadata = {
+  title: "Footer",
+  description: "Footer section of the website",
+};
+
 import { FaDribbble, FaLinkedin } from "react-icons/fa";
 import { BsToggleOn } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className="bg-black text-white">
-        <div className="container mx-auto flex justify-between items-center py-8">
-          <a href="/Logo" className="text-2xl font-bold text-gray-300">LOGO</a>
+    <div className="text-white">
+      <div className="container mx-14 flex justify-between items-center py-8">
+        <a href="/Logo" className="text-2xl font-bold text-gray-300">
+          LOGO
+        </a>
 
-          <nav className="hidden md:flex space-x-6">
-            <a href="/home" className="hover:text-gray-400">Home</a>
-            <a href="" className="hover:text-gray-400">About</a>
-            <a href="/projects" className="hover:text-gray-400">Work</a>
-            <a href="/contact" className="hover:text-gray-400">Contact</a>
-          </nav>
+        <nav className="hidden md:flex space-x-8">
+          <a href="/home" className="hover:text-gray-400">Home</a>
+          <a href="/about" className="hover:text-gray-400">About</a>
+          <a href="/projects" className="hover:text-gray-400">Work</a>
+          <a href="/contact" className="hover:text-gray-400">Contact</a>
+        </nav>
 
-          <div className="flex space-x-4 items-center">
-            <BsToggleOn className="text-white text-xl cursor-pointer" />
-            <FaDribbble className="text-white text-xl cursor-pointer" />
-            <FaLinkedin className="text-white text-xl cursor-pointer" />
-          </div>
+        <div className="flex space-x-4 items-center text-white text-xl">
+          <BsToggleOn
+            className="cursor-pointer hover:text-gray-300"
+            aria-label="Toggle Theme"
+            onClick={() => console.log("Toggle theme")}
+          />
+          <a
+            href="https://dribbble.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dribbble"
+          >
+            <FaDribbble className="cursor-pointer hover:text-pink-500" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="cursor-pointer hover:text-blue-500" />
+          </a>
         </div>
-        <div className="border-t border-[#C8C8C8] mb-4"></div>
+      </div>
+      <div className="border-t border-[#C8C8C8] w-[1320px] mx-12 mb-8"></div>
     </div>
   );
 }
-

@@ -29,12 +29,16 @@ export default function Contact() {
             href="https://example.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-white bg-black text-white px-6 py-3 rounded-[90px] flex items-center gap-3"
-          >
-            Get in touch
+            className="border-2 border-white bg-black text-white px-6 py-3 rounded-[90px] flex items-center gap-3 transition-all duration-300 hover:bg-white hover:text-black"
+            >
+              <span className="transition-transform duration-300 hover:scale-110">
+                Get in touch
+              </span>
           </a>
         </div>
+
       </div>
+      
     </div>
   );
 }

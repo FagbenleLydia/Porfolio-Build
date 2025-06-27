@@ -36,9 +36,6 @@ export default function Port() {
                 <br />   and a strong understanding of the space I’m building in.
               </p>
               <div className="flex items-center space-x-4 mt-6">
-                <div className="w-[72px] h-[72px] rounded-full overflow-hidden bg-gray-500">
-                  <img src="/path-to-image.jpg" alt="Profile" className="w-full h-full object-cover" />
-                </div>
                 <div className="flex flex-col space-y-1">
                   <p className="text-[18px] text-white font-semibold">Brian Johnson</p>
                   <p className="text-[16px] text-gray-500">Digital Solutions Agency</p>
@@ -61,9 +58,6 @@ export default function Port() {
                 <br />   and a strong understanding of the space I’m building in.
               </p>
               <div className="flex items-center space-x-4 mt-6">
-                <div className="w-[72px] h-[72px] rounded-full overflow-hidden bg-gray-500">
-                  <img src="/path-to-image.jpg" alt="Profile" className="w-full h-full object-cover" />
-                </div>
                 <div className="flex flex-col space-y-1">
                   <p className="text-[18px] text-white font-semibold">Brian Johnson</p>
                   <p className="text-[16px] text-gray-500">Digital Solutions Agency</p>
@@ -85,9 +79,6 @@ export default function Port() {
                 <br />   and a strong understanding of the space I’m building in.
               </p>
               <div className="flex items-center space-x-4 mt-6">
-                <div className="w-[72px] h-[72px] rounded-full overflow-hidden bg-gray-500">
-                  <img src="/path-to-image.jpg" alt="Profile" className="w-full h-full object-cover" />
-                </div>
                 <div className="flex flex-col space-y-1">
                   <p className="text-[18px] text-white font-semibold">Brian Johnson</p>
                   <p className="text-[16px] text-gray-500">Digital Solutions Agency</p>
