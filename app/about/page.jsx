@@ -7,13 +7,25 @@ export default function About() {
   return (
     <div className="mt-[120px] border-2 border-black flex-1 px-10">
       <div className="text-white flex justify-between items-start gap-16">
-        <div className="flex flex-col items-start space-y-8 w-2/5">
+        <div className="flex flex-col items-start space-y-4 w-2/5">
           <div className="flex items-center space-x-4">
-            <span className="w-3 h-3 bg-white rounded-full"></span>
-            <span className="text-left uppercase text-lg">About</span>
+            {/* <span className="w-3 h-3 bg-white rounded-full"></span> */}
+            <span className="text-left uppercase text-[#2FCD7B] text-lg">
+              About
+            </span>
           </div>
 
-          <h1 className="uppercase text-[50px] leading-tight mt-8">
+          <h1
+            className="
+    uppercase 
+    text-[50px] 
+    leading-tight 
+    mt-8 
+    font-extrabold
+    bg-clip-text text-transparent
+    bg-[url('/assets/imgbg.png')] bg-cover bg-center
+  "
+          >
             Get to <br /> know me
           </h1>
         </div>
@@ -21,32 +33,41 @@ export default function About() {
         <div className="w-3/5 max-w-2xl leading-[38px] text-left">
           <div className="space-y-8 px-6 text-[18px]">
             <p>
-              I am a product designer with over 5 years of experience designing digital
+              I am a product designer with over 7 years experience designing
+              digital
               <br />
-              solutions for people across various industries, including fintech, banking, <br />
-              and e-commerce. I'm adept at collaborating with cross-functional teams <br />
-              (designers, developers) to bring ideas to life, leveraging data-driven <br />
-              research and a strong understanding of the space I’m building in.
+              solutions for people across various industries, including fintech,
+              banking, and e-commerce. I'm adept at collaborating with
+              cross-functional teams (designers, developers) to bring ideas to
+              life leveraging data driven research and strong understanding of
+              the space I’m building in.
             </p>
             <p>
-              My experience cuts across startups and established companies. For <br />
-              startups, I've helped translate brilliant ideas into functional businesses, and <br />
-              for established companies, I've championed legacy redesign efforts; <br />
+              My experience cuts across startups and established companies. For{" "}
+              <br />
+              startups, I've helped translate brilliant ideas into functional
+              businesses, and <br />
+              for established companies, I've championed legacy redesign
+              efforts; <br />
               transforming them into modern, user-friendly experiences.
             </p>
           </div>
 
           <div className="mt-[100px] flex justify-start gap-6 px-6">
             <div className="flex flex-col mb-9">
-              <span className="text-[60px] font-bold mb-7">6+</span>
-              <span className="w-full max-w-[180px] h-[2px] bg-white mb-4"></span>
+              <span className="text-[60px] text-[#2FCD7B] font-bold mb-7">
+                7+
+              </span>
+              <span className="w-full max-w-[180px] h-[1px] bg-[#646464] mb-4"></span>
               <p className="text-[18px]">Years of Experience</p>
             </div>
 
             <div className="flex flex-col mb-9">
-              <span className="text-[60px] font-bold mb-7">6+</span>
-              <span className="w-full max-w-[180px] h-[2px] bg-white mb-4"></span>
-              <p className="text-[18px]">Years of Experience</p>
+              <span className="text-[60px] text-[#2FCD7B] font-bold mb-7">
+                20+
+              </span>
+              <span className="w-full max-w-[180px] h-[1px] bg-[#646464] mb-4"></span>
+              <p className="text-[18px]">Projects Completed</p>
             </div>
           </div>
 
@@ -55,19 +76,18 @@ export default function About() {
               href="https://example.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-[#494949] bg-black text-white px-6 py-3 rounded-[90px] flex items-center gap-3 transition duration-300 hover:bg-white hover:text-black"
+              className="group border border-[#2FCD7B] bg-black text-[#2FCD7B] px-6 py-3 rounded-[90px] flex items-center gap-3 transition duration-300 hover:bg-white hover:text-black"
             >
               <span className="font-medium transition-transform duration-300 group-hover:scale-110">
                 View my resume
               </span>
 
-     
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6 transform rotate-[-45deg] transition duration-300 group-hover:stroke-black"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="white"
+                stroke="#2FCD7B"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

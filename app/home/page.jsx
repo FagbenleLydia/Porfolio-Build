@@ -2,6 +2,7 @@ import About from "../about/page";
 import Contact from "../contact/page";
 import Projects from "../projects/page";
 import Footer from "./Footer";
+import Image from "next/image";
 
 export const metadata = {
   title: "Home",
@@ -9,39 +10,70 @@ export const metadata = {
 };
 
 export default function Home() {
+  const brands = [
+    { src: "/assets/woven.svg", alt: "Woven" },
+    { src: "/assets/anchoria.svg", alt: "Anchoria" },
+    { src: "/assets/coronation.svg", alt: "Coronation" },
+    { src: "/assets/qxtra.svg", alt: "Qxtra" },
+    { src: "/assets/propay.svg", alt: "Propay" },
+    { src: "/assets/ezpark.svg", alt: "EZPark" },
+  ];
+
   return (
     <div className="text-[#C0C0C0] mt-[200px]">
-      <div className="max-w-full px-12">
-        <p className="uppercase text-[100px] leading-[1.2] font-extrabold">
-          <span className="text-[#9C9C9C]">Hi, I’m Sam</span>uel um
-          <span className="text-[#E0E0E0]">oru</span>
-          <br />
-          <span className="text-[#9C9C9C]">product de</span>signer <span className="text-[#E0E0E0]">and</span>
-          <br />
-          <span className="text-[#9C9C9C]">product str</span>ateg
-          <span className="text-[#E0E0E0]">ist</span>
-        </p>
+      {/* Hero Image */}
+      <div className="w-full flex justify-center">
+        <Image
+          src="/assets/sam.svg"
+          alt="Hi, I’m Samuel Umoru - Product Designer and Product Strategist"
+          width={1400}
+          height={450}
+          priority
+          className="h-auto w-[90%]"
+        />
       </div>
 
-      <div className="mt-[150px]"></div> 
-      <div className="text-[#C8C8C8] flex justify-between w-full text-[15px] leading-[32px] font-medium px-14">
-        <p className="text-left max-w-md">
-          Senior Product Designer with 6+ Years of Experience <br />
-          Crafting Impactful Digital Solutions
-        </p>
-        <p className="text-right max-w-md">
-          Based in Lagos, Nigeria <br />
-          and open to work Worldwide
-        </p>
+      <div className="mt-[150px]" />
+
+      {/* ✅ Replaced the <p> section with marquee */}
+      <div className="w-full bg-black py-10">
+        <h2 className="text-center text-[#C8C8C8] uppercase text-sm font-medium mb-6">
+          Brands I’ve Worked With
+        </h2>
+
+        <div className="relative overflow-hidden">
+          <div className="flex animate-marquee space-x-6">
+            {brands.concat(brands).map((brand, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-[140px] h-[70px] flex items-center justify-center bg-[#111] rounded-lg border border-[#333]"
+              >
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={100}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Rest of your sections */}
       <div className="px-4 mt-4">
-        <About /> 
+        <About />
       </div>
- <div> <Projects /> </div>
-     <div> <Contact /></div> 
-     <div> <Footer /></div>
+      <div>
+        <Projects />
+      </div>
+      <div>
+        <Contact />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
-    
   );
 }
-

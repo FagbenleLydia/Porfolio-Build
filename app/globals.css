@@ -16,3 +16,30 @@ body{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Prevent any horizontal scroll anywhere */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Media elements can’t push width */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}

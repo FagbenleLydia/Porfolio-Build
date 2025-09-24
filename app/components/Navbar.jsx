@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import Image from "next/image"; // ✅ import next/image
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,16 +60,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <motion.div
-          initial={{ y: 0 }}
-          whileHover={{ y: -8 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-          className="relative cursor-pointer"
-        >
-          <Link href="/Logo" className="font-extrabold text-3xl uppercase hover-effect text-[30px] font-extrabold ">
-            <span className="text-[#D0D0D0]">Lo</span>go
-          </Link>
-        </motion.div>
+      <motion.div
+  initial={{ y: 0 }}
+  whileHover={{ y: -8 }}
+  transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
+  className="relative cursor-pointer"
+>
+  <Link href="/Logo" className="flex items-center">
+    <Image
+      src="/assets/logo.svg"
+      alt="Website Logo"
+      width={320}   // still required for next/image optimization
+      height={120}
+      priority
+      className="h-auto w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px]"
+    />
+  </Link>
+</motion.div>
+
 
         <ul className="hidden md:flex space-x-8 text-lg font-semibold uppercase text-[11px] font-normal gap-[60px]">
           {["Projects", "Contact"].map((item, index) => (

@@ -11,137 +11,292 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <div className="mt-[120px] ">
-      <div className="text-white flex justify-between items-start px-14 ">
+    <div className="mt-[120px]">
+      {/* Header */}
+      <div className="text-white flex justify-between items-start px-6 md:px-20">
         <div className="flex flex-col items-start">
           <div className="flex items-center space-x-4">
-            <span className="w-3 h-3 bg-white rounded-full"></span>
-            <span className="text-left uppercase text-lg">Portfolio</span>
+            <span className="text-left uppercase text-lg">Projects</span>
           </div>
-          <h1 className="uppercase text-[80px] leading-tight mt-2">
-            Featured Works
-          </h1>
+
+          <Image
+            src="/assets/featy.svg"
+            alt="Featured Works"
+            width={600}
+            height={120}
+            className="mt-4 w-[250px] md:w-[600px] h-auto"
+            priority
+          />
         </div>
       </div>
 
-      <div className="mt-[40px] flex flex-wrap justify-between gap-8 max-w-[1440px] mx-auto px-14">
+      {/* Projects grid */}
+      <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1440px] mx-auto px-6 md:px-14">
         {/* Project 1 */}
-        <div className="flex-1 max-w-[50%] group">
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
-          >
-            <img
-              src="/assets/img.jpg"
-              alt="Project 1"
-              className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
-          </a>
-          <div className="relative h-[48px] mt-4 overflow-hidden">
-            <h3 className="absolute top-0 left-0 text-white text-[40px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
-            </h3>
-            <h3 className="absolute top-full left-0 text-white text-[40px] font-semibold underline transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
-            </h3>
-          </div>
-          <div className="flex gap-x-4 text-white text-[18px]">
-            <p>UI / UX Design</p>
-            <p>Product Thinking</p>
-          </div>
-        </div>
-
-        {/* Project 2 */}
-        <div className="flex-1 max-w-[50%] group">
+        <div className="group">
           <Link href="/content-one">
-            <div className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer group">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              {/* Default */}
               <img
-                src="/assets/img2.jpg"
-                alt="Project 2"
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                src="/assets/libra1.svg"
+                alt="Project 1 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              {/* Hover */}
+              <img
+                src="/assets/libra2.svg"
+                alt="Project 1 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
               />
             </div>
           </Link>
           <div className="relative h-[48px] mt-4 overflow-hidden">
-            <h3 className="absolute top-0 left-0 text-white text-[40px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-0 left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              Finance tool for Businesses
             </h3>
-            <h3 className="absolute top-full left-0 text-white text-[40px] font-semibold underline transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-full left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              Finance tool for Businesses
             </h3>
           </div>
-          <div className="flex gap-x-4 text-white text-[18px]">
-            <p>UI / UX Design</p>
-            <p>Product Thinking</p>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-one"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
           </div>
         </div>
-      </div>
 
-      <div className="mt-[40px] flex flex-wrap justify-between gap-8 max-w-[1440px] mx-auto px-14">
-        {/* Project 3 */}
-        <div className="flex-1 max-w-[50%] group">
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
-          >
-            <img
-              src="/assets/img.jpg"
-              alt="Project 3"
-              className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
-          </a>
+        {/* Project 2 */}
+        <div className="group">
+          <Link href="/content-two">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              {/* Default */}
+              <img
+                src="/assets/uni2.svg"
+                alt="Project 2 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              {/* Hover */}
+              <img
+                src="/assets/uni1.svg"
+                alt="Project 2 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </div>
+          </Link>
           <div className="relative h-[48px] mt-4 overflow-hidden">
-            <h3 className="absolute top-0 left-0 text-white text-[40px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-0 left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              Insurance Retail Portal
             </h3>
-            <h3 className="absolute top-full left-0 text-white text-[40px] font-semibold underline transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-full left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              Insurance Retail Portal
             </h3>
           </div>
-          <div className="flex gap-x-4 text-white text-[18px]">
-            <p>UI / UX Design</p>
-            <p>Product Thinking</p>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-two"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Project 3 */}
+        <div className="group">
+          <Link href="/content-one">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              <img
+                src="/assets/img.jpg"
+                alt="Project 3 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              <img
+                src="/assets/img-hover.jpg"
+                alt="Project 3 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+          <div className="relative h-[48px] mt-4 overflow-hidden">
+            <h3 className="absolute top-0 left-0 text-white text-[26px] md:text-[32px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              University Management Platform
+            </h3>
+            <h3 className="absolute top-full left-0 text-white text-[26px] md:text-[32px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              University Management Platform
+            </h3>
+          </div>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-one"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
           </div>
         </div>
 
         {/* Project 4 */}
-        <div className="flex-1 max-w-[50%] group">
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden"
-          >
-            <img
-              src="/assets/img3.jpg"
-              alt="Project 4"
-              className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
-          </a>
+        <div className="group">
+          <Link href="/content-one">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              <img
+                src="/assets/img3.jpg"
+                alt="Project 4 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              <img
+                src="/assets/img3-hover.jpg"
+                alt="Project 4 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </div>
+          </Link>
           <div className="relative h-[48px] mt-4 overflow-hidden">
-            <h3 className="absolute top-0 left-0 text-white text-[40px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-0 left-0 text-white text-[26px] md:text-[32px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              University Management Platform
             </h3>
-            <h3 className="absolute top-full left-0 text-white text-[40px] font-semibold underline transition-transform duration-300 group-hover:-translate-y-full">
-              Micro-loans digitization
+            <h3 className="absolute top-full left-0 text-white text-[26px] md:text-[32px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              University Management Platform
             </h3>
           </div>
-          <div className="flex gap-x-4 text-white text-[18px]">
-            <p>UI / UX Design</p>
-            <p>Product Thinking</p>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-one"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Project 5 */}
+        <div className="group">
+          <Link href="/content-one">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              <img
+                src="/assets/img3.jpg"
+                alt="Project 5 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              <img
+                src="/assets/img5-hover.jpg"
+                alt="Project 5 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+          <div className="relative h-[48px] mt-4 overflow-hidden">
+            <h3 className="absolute top-0 left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              EZPark Digital Suite
+            </h3>
+            <h3 className="absolute top-full left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              EZPark Digital Suite
+            </h3>
+          </div>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-one"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Project 6 */}
+        <div className="group">
+          <Link href="/content-one">
+            <div className="relative w-full h-[260px] sm:h-[300px] md:h-[380px] lg:h-[480px] border-2 border-gray-400 rounded-[8px] overflow-hidden cursor-pointer">
+              <img
+                src="/assets/img3.jpg"
+                alt="Project 6 Default"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0 group-hover:scale-105"
+              />
+              <img
+                src="/assets/img6-hover.jpg"
+                alt="Project 6 Hover"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+          <div className="relative h-[48px] mt-4 overflow-hidden">
+            <h3 className="absolute top-0 left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              EZPark Digital Suite
+            </h3>
+            <h3 className="absolute top-full left-0 text-white text-[28px] md:text-[35px] font-semibold transition-transform duration-300 group-hover:-translate-y-full">
+              EZPark Digital Suite
+            </h3>
+          </div>
+          <div className="grid grid-cols-3 items-center text-[14px] md:text-[16px] mt-2">
+            <p className="text-[#909090]">UI / UX Design</p>
+            <Link
+              href="/content-one"
+              className="text-white hover:text-gray-300 transition-colors justify-self-center"
+            >
+              View Project
+            </Link>
+            <Link
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-500 transition-colors flex items-center gap-1 justify-self-end"
+            >
+              Go to Site <span>→</span>
+            </Link>
           </div>
         </div>
       </div>
 
       <Services />
-      <div>
-        {" "}
-        <Portfolio />
-      </div>
+      <Portfolio />
       <Port />
     </div>
   );

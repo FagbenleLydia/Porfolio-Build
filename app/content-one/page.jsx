@@ -280,6 +280,185 @@ function PortfolioProjectPage() {
           </div>
         </div>
       </section>
+
+{/* Design Approach Section */}
+{/* Design Approach Section */}
+<section className="bg-[#111111] text-white py-12 sm:py-16 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-8">
+    <div>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Design Approach</h2>
+       <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0] mb-4">
+              I drafted a simple, minimalist user flow that enabled customers to
+              quickly check their eligibility without being bogged down by
+              excessive data entry. The flow was designed to reduce friction and
+              deliver a modern, efficient experience.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0] mb-4">
+              Upon review of the flow with the engineers and product owners, we
+              ideated a better and more seamless approach to the process by
+              creating a pre-approval system. This meant that the backend team
+              would build an engine to automate the approval process from the
+              excel sheet and the customers would be notified of their
+              eligibility before they even applied.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+              This approach would serve as both a marketing effort and process
+              starter. With this in mind, I fine-tuned the user flow to cater to
+              this, making it far more straightforward.
+            </p>
+    </div>
+
+    <div>
+      <Image
+        src="/assets/digital.png"
+        alt="Digital application process flow"
+        width={1000}
+        height={400}
+        className="mx-auto w-full h-auto object-contain"
+      />
+    </div>
+  </div>
+</section>
+
+{/* Emphasis on Transparency */}
+<section className="bg-[#111111] text-white py-12 sm:py-16 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Emphasis on Transparency</h2>
+    <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+            I chose to prominently present fee structures, and repayment details
+            within the application process. This decision was essential to
+            create clarity and build trust among users and provide clear
+            expectations right from the outset.
+          </p>
+    <Image
+      src="/assets/emphasis.png"
+      alt="Loan application screens"
+      width={1200}
+      height={800}
+      className="mx-auto w-full h-auto object-contain"
+    />
+  </div>
+</section>
+
+{/* High Fidelity Designs */}
+<section className="bg-[#111111] text-white py-12 sm:py-16 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-10 sm:space-y-12">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">High Fidelity Designs</h2>
+    <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0] mb-6">
+            Here’s a preview of how we solved the challenge areas with the
+            design:
+          </p>
+
+    <ul className="list-disc pl-4 sm:pl-6 space-y-10 sm:space-y-12 text-sm sm:text-base !text-[#A0A0A0]">
+      <li> Prompt users from their dashboard to be able to request for loans
+              once they have been certified eligible backend. Prompt users from their dashboard...
+        <div className="mt-4 sm:mt-6">
+          <Image
+            src="/assets/fidelity.png"
+            alt="High fidelity design - dashboard eligibility"
+            width={1200}
+            height={800}
+            className="mx-auto w-full h-auto object-contain"
+          />
+        </div>
+      </li>
+
+      <li>
+        Applying for loans as a youth corper
+        <div className="mt-4 sm:mt-6">
+          <Image
+            src="/assets/youth.png"
+            alt="High fidelity design - youth corper flow"
+            width={1200}
+            height={800}
+            className="mx-auto w-full h-auto object-contain"
+          />
+        </div>
+      </li>
+
+      <li>
+         The flow that caters to other loan types; with this, we aimed to
+              get customers to take loans with us in as quickly as 3-steps.
+        <div className="mt-4 sm:mt-6">
+          <Image
+            src="/assets/carters.png"
+            alt="High fidelity design - 3 step loan flow"
+            width={1200}
+            height={800}
+            className="mx-auto w-full h-auto object-contain"
+          />
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{/* Testing */}
+<section className="bg-[#111111] text-white py-12 sm:py-16 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-6">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Testing</h2>
+       <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+            We had guerrilla tests done with the low fidelity wireframes – to
+            validate the plan structured out in the design. Then another round
+            of tests with more stakeholders and product owners to review what
+            the result looked like. App content/copy recommendations were made
+            by the UX writing team of the bank’s communication department, after
+            which the final designs were presented to the bank’s management for
+            approval and recommendations.
+          </p>
+  </div>
+</section>
+
+{/* Gains */}
+<section className="bg-[#111111] text-white py-4 sm:py-4 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-6">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Gains, learnings and future plans</h2>
+     <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+            I had to learn a different approach to get buy-in for my design
+            ideas. I was having to deal with industry experts in different
+            banking areas, as well as management staff who were not keen on
+            taking a lot of risk to give out loans at scale to customers who
+            they didn’t deem fit. I leveraged information gained from
+            competition, metrics on potential gains from exploring the venture,
+            as well as how risk was to be averted with our designed flows to get
+            buy in from relevant stakeholders.
+          </p>
+          <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+            I gained key insights into the lending space – both from the banking
+            perspective as well as fintech perspective. It was an interesting
+            task to marry all that information to birth ideas that would
+            leverage the strengths of both sides.
+          </p>
+          <p className="text-sm sm:text-base leading-relaxed !text-[#A0A0A0]">
+            I had to prototype a lot and make changes on the go as I was working
+            with stakeholder feedback to fine-tune my work within a short time,
+            before having to present to management. We succeeded in getting
+            approval for development. Yay!
+          </p>
+  </div>
+</section>
+
+{/* Project Navigation + Credit */}
+<section className="bg-[#111111] text-white py-12 sm:py-16 px-4 sm:px-10">
+  <div className="max-w-5xl mx-auto space-y-8">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+      <a href="#" className="text-sm text-[#E0E0E0] flex items-center gap-2">
+        ← Previous
+      </a>
+      <Image
+        src="/assets/Unify.svg"
+        alt="Next Project - Unify"
+        width={320}
+        height={100}
+        className="object-contain w-full sm:w-auto"
+      />
+    </div>
+
+    <hr className="border-t border-[#333]" />
+    <p className="text-center text-xs text-[#A0A0A0]">©2025 Samuel Umoru</p>
+  </div>
+</section>
+
     </div>
   );
 }
